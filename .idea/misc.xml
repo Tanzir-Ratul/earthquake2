@@ -3,8 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ratul/AndroidStudioProjects/EarthquakeApp2/app/src/main/res/drawable-v24/bg_sky_blue.xml" value="0.125" />
+        <entry key="..\:/Users/ratul/AndroidStudioProjects/EarthquakeApp2/app/src/main/res/drawable/cashin_inactive.xml" value="0.125" />
+        <entry key="..\:/Users/ratul/AndroidStudioProjects/EarthquakeApp2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.125" />
+        <entry key="..\:/Users/ratul/AndroidStudioProjects/EarthquakeApp2/app/src/main/res/font/font.xml" value="0.2171875" />
+        <entry key="..\:/Users/ratul/AndroidStudioProjects/EarthquakeApp2/app/src/main/res/font/font_familly.xml" value="0.2171875" />
+        <entry key="..\:/Users/ratul/AndroidStudioProjects/EarthquakeApp2/app/src/main/res/font/noto_sans.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/ratul/AndroidStudioProjects/EarthquakeApp2/app/src/main/res/font/roboto.xml" value="0.21822916666666667" />
         <entry key="..\:/Users/ratul/AndroidStudioProjects/EarthquakeApp2/app/src/main/res/layout/activity_main.xml" value="0.17395833333333333" />
-        <entry key="..\:/Users/ratul/AndroidStudioProjects/EarthquakeApp2/app/src/main/res/layout/earthquake_item.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/ratul/AndroidStudioProjects/EarthquakeApp2/app/src/main/res/layout/cashin_inactive.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/ratul/AndroidStudioProjects/EarthquakeApp2/app/src/main/res/layout/earthquake_item.xml" value="0.25" />
         <entry key="..\:/Users/ratul/AndroidStudioProjects/EarthquakeApp2/app/src/main/res/layout/fragment_earthquake.xml" value="0.22" />
       </map>
     </option>

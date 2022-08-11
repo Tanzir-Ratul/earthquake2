@@ -18,11 +18,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="8dp"
             android:gravity="center"
             android:theme="@style/Widget.Design.TabLayout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -31,11 +32,12 @@
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp"
-                android:letterSpacing="0.1"
+                android:layout_marginEnd="2dp"
                 android:text="From"
+                android:fontFamily="@font/robotoserif_regular"
+                android:textSize="10sp"
+                android:layout_weight=".35"
                 android:textAllCaps="false"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
                 android:theme="@style/Widget.MaterialComponents.TextView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -45,24 +47,24 @@
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp"
+                android:layout_marginStart="2dp"
                 android:letterSpacing="0.1"
                 android:text="To"
+                android:fontFamily="@font/robotoserif_regular"
+                android:layout_weight=".35"
+                android:textSize="10sp"
                 android:textAllCaps="false"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
-                android:theme="@style/Widget.MaterialComponents.TextView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/spinner"
-                style="@style/Widget.AppCompat.Spinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_marginStart="2dp"
+                android:layout_weight=".1"
                 android:minHeight="48dp"
-                android:textAlignment="center"
-                android:theme="@style/Widget.AppCompat.Spinner.DropDown" />
+                 />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/goButton"
@@ -72,6 +74,8 @@
                 android:layout_margin="3dp"
                 android:letterSpacing="0.1"
                 android:text="@string/go"
+                android:fontFamily="@font/robotoserif_regular"
+                android:layout_weight=".1"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
                 android:theme="@style/Widget.Material3.Button.TextButton.Icon"
@@ -80,35 +84,41 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/endLinearlay"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/startLinearlay"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/startLinearlay"
+            app:layout_constraintTop_toBottomOf="@+id/startLinearlay"
+            app:layout_constraintVertical_bias="1.0">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/earthquakeRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/earthquake_item" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <ProgressBar
             android:id="@+id/progressBar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="328dp"
             android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.471"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/startLinearlay"
-            app:layout_constraintVertical_bias="0.996" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/earthquakeRV"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="380dp"
-            android:background="@color/purple_200"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/startLinearlay"
-            app:layout_constraintTop_toBottomOf="@+id/startLinearlay"
-            app:layout_constraintVertical_bias="0.067" />
-
+            app:layout_constraintBottom_toBottomOf="@+id/endLinearlay"
+            app:layout_constraintEnd_toEndOf="@+id/endLinearlay"
+            app:layout_constraintStart_toEndOf="@+id/endLinearlay"
+            app:layout_constraintStart_toStartOf="@+id/endLinearlay"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -5,7 +5,7 @@ import com.example.earthquakeapp.BuildConfig
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.haroldadmin.cnradapter.NetworkResponseAdapterFactory
-import com.localebro.okhttpprofiler.OkHttpProfilerInterceptor
+//import com.localebro.okhttpprofiler.OkHttpProfilerInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -45,7 +45,7 @@ object RetrofitUtils {
                     httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
                 }
                 addInterceptor(loggingInterceptor)
-                addInterceptor(OkHttpProfilerInterceptor())
+               // addInterceptor(OkHttpProfilerInterceptor())
 
             }
             cache(cache)
@@ -58,7 +58,7 @@ object RetrofitUtils {
     fun retrofitInstance(baseUrl: String, gson: Gson, httpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create(gson))
-            //.addConverterFactory(NetworkResponseAdapterFactory())
+            .addCallAdapterFactory(NetworkResponseAdapterFactory())
             .baseUrl(baseUrl)
             .client(httpClient)
             .build()

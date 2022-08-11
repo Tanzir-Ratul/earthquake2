@@ -2,7 +2,7 @@ package com.example.earthquakeapp.di
 
 import com.example.earthquakeapp.api.RetrofitUtils.retrofitInstance
 import com.example.earthquakeapp.api.endpoint.network.ApiService
-import com.example.earthquakeapp.helper.Constant
+import com.example.earthquakeapp.ui.helper.Constant
 import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides

@@ -99,4 +99,5 @@ data class Earthquake(
         @SerializedName("url")
         val url: String
     )
+
 }
