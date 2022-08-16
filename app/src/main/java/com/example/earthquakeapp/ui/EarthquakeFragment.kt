@@ -80,7 +80,7 @@ class EarthquakeFragment @Inject constructor() :
                     Toast.makeText(requireContext(), "Please enter valid date", Toast.LENGTH_SHORT)
                         .show()
                 } else {
-                    viewModel.getData()
+                    initEarthquakeAdapter()
                 }
 
             } catch (e: Exception) {

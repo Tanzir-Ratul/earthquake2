@@ -22,9 +22,9 @@ class EarthquakeViewModel
     //private val earthquakeStateFlow: MutableStateFlow<ApiState> = MutableStateFlow(ApiState.Empty)
     //val _earthquakeStateFlow: StateFlow<ApiState> = earthquakeStateFlow
     val responseBody: MutableLiveData<Earthquake> = MutableLiveData()
-    val startDateLV: MutableLiveData<String> = MutableLiveData()
-    val endDateLV: MutableLiveData<String> = MutableLiveData()
-    val magnitudeLV: MutableLiveData<Double> = MutableLiveData()
+//    val startDateLV: MutableLiveData<String> = MutableLiveData()
+//    val endDateLV: MutableLiveData<String> = MutableLiveData()
+//    val magnitudeLV: MutableLiveData<Double> = MutableLiveData()
     var startDateE: String = ""
     var toDateE: String = ""
     var mag: Double = 5.0

@@ -49,9 +49,9 @@ object RetrofitUtils {
 
             }
             cache(cache)
-            readTimeout(30, TimeUnit.SECONDS)
+            readTimeout(60, TimeUnit.SECONDS)
             writeTimeout(1, TimeUnit.MINUTES)
-            connectTimeout(30, TimeUnit.SECONDS)
+            connectTimeout(60, TimeUnit.SECONDS)
         }.build()
     }
 
